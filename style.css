@@ -1,0 +1,446 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 15px;
+    background-color: #0e0e10;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.page {
+    overflow: hidden;
+}
+
+input, textarea {
+    outline: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*margin: 0 100px;*/
+    background-color: #0e0e10;
+    font-family: "Roboto", sans-serif;
+    /*width: 100%;*/
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(6, 55px);
+    grid-template-rows: repeat(6, 55px);
+    position: relative;
+    border: 2px solid #555;
+    background-color: #2B272D;
+}
+
+#grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#555 1px, transparent 1px), linear-gradient(to right, #555 1px, transparent 1px);
+    background-size: 55px 55px;
+    pointer-events: none;
+}
+
+.block {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
+
+.block.horizontal {
+    padding: 10px 5px;
+}
+
+.block.vertical {
+    padding: 5px 10px;
+}
+
+.block-child {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
+}
+
+.red {
+    background-color: #3E2025;
+}
+
+.red .block-child {
+    background-color: #D93334;
+}
+
+.green {
+    background-color: #304C26;
+}
+
+.green .block-child {
+    background-color: #77FB4F;
+}
+
+.key .block-child {
+    background-color: #3E3A29;
+}
+
+.key {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: transparent;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.exit {
+    width: 20px;
+    height: 55px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #2B272D;
+    box-shadow: inset 0 0 0 1px #555;
+    font-weight: bold;
+}
+
+#date-display {
+    color: #2ecc71;
+    padding-left: 10px;
+}
+
+.date-wraper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.caption {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+#caption-hamster {
+    color: #f1c40f;
+
+    font-weight: bold;
+}
+
+#caption-puzzle {
+    color: #D93334;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer-social {
+    display: flex;
+}
+
+#footer-social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+#footer-social a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.button {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 3rem;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+    .button {
+        padding: 0 2.6rem;
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#timerButton {
+    width: 170px;
+}
+
+#refreshButton {
+    display: flex;
+    align-items: center;
+}
+
+#refreshButton img {
+    width: 24px;
+    height: 24px;
+}
+
+#update-puzzle-time {
+    display: inline-block;
+    background-color: #D93334;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#update-puzzle {
+    display: none;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #fff;
+    color: #0e0e10;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Position above the tooltip */
+    left: 50%;
+    margin-left: -250px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-symbol {
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.important {
+    color: #D93334;
+    font-weight: bold;
+}
+
+.hamster-theme .green {
+    border: 0.8px solid #0a0;
+}
+
+.hamster-theme .green .block-child {
+    position: relative;
+    border-radius: unset;
+    background-color: #39ff14;
+    border: 1px solid #0a0;
+}
+
+.hamster-theme .green .block-child::before, .hamster-theme .green .block-child::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 10px;
+    background-color: #39ff14;
+    transform: translateY(-50%);
+}
+
+.hamster-theme .block-child::before {
+    left: -14px;
+    border-radius: 1px 0 0 1px;
+    border: 1px solid #0a0;
+    border-right: 0;
+}
+
+.hamster-theme .block-child::after {
+    right: -14px;
+    border-radius: 0 1px 1px 0;
+    border: 1px solid #0a0;
+    border-left: 0;
+}
+
+.hamster-theme .block.horizontal {
+    padding: 12px 16px;
+}
+
+.hamster-theme .red {
+    border: 0.8px solid #a00;
+}
+
+.hamster-theme .red .block-child {
+    position: relative;
+    border-radius: unset;
+    background-color: #EB3729;
+    border: 1px solid #a00;
+}
+
+.hamster-theme .red .block-child::before, .hamster-theme .red .block-child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 14px;
+    background-color: #EB3729;
+    transform: translateX(-50%);
+}
+
+.hamster-theme .red .block-child::before {
+    top: -14px;
+    border-radius: 1px 1px 0 0;
+    border: 1px solid #a00;
+    border-bottom: 0;
+}
+
+.hamster-theme .red .block-child::after {
+    bottom: -14px;
+    border-radius: 0 0 1px 1px;
+    border: 1px solid #a00;
+    border-top: 0;
+}
+
+.hamster-theme .block.vertical {
+    padding: 16px 12px;
+}
+
+
+.hamster-theme .key .block-child {
+    background-image: url("hamster-key.png");
+    background-size: cover;
+    border-radius: 1px;
+    border: 1px solid #989B5D;
+}
+
+.hamster-theme .key {
+    padding: 0;
+}
+
+.key-generator {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.key-generator-link {
+    color: #f1c40f;
+    margin-left: 15px;
+}
