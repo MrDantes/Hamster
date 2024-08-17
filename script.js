@@ -489,6 +489,24 @@ const maps = {
         ],
         key: {id: 10, x: 2, y: 2, width: 2, height: 1, direction: 'horizontal'},
         exitPosition: {x: 6, y: 2}
+    },
+    '2024-08-18': {
+        blocks: [
+            {id: 1, x: 0, y: 3, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 2, x: 1, y: 1, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 3, x: 2, y: 4, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 4, x: 3, y: 0, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 5, x: 4, y: 1, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 6, x: 5, y: 2, width: 1, height: 2, direction: 'vertical', color: 'red'},
+            {id: 7, x: 1, y: 0, width: 2, height: 1, direction: 'horizontal', color: 'green'},
+            {id: 8, x: 4, y: 0, width: 2, height: 1, direction: 'horizontal', color: 'green'},
+            {id: 9, x: 1, y: 3, width: 2, height: 1, direction: 'horizontal', color: 'green'},
+            {id: 10, x: 3, y: 3, width: 2, height: 1, direction: 'horizontal', color: 'green'},
+            {id: 11, x: 3, y: 4, width: 3, height: 1, direction: 'horizontal', color: 'green'},
+            {id: 12, x: 2, y: 2, width: 2, height: 1, direction: 'horizontal', color: 'blue'},
+        ],
+        key: {id: 12, x: 2, y: 2, width: 2, height: 1, direction: 'horizontal'},
+        exitPosition: {x: 6, y: 2}
     }
 };
 
@@ -725,7 +743,7 @@ function startCountdown(targetDate) {
     const interval = setInterval(updateCountdown, 1000);
 }
 
-const targetDate = new Date('Sun Aug 17 2024 20:30:00 GMT+0000').getTime();
+const targetDate = new Date('Sun Aug 18 2024 20:30:00 GMT+0000').getTime();
 const beforeFourHours = new Date(targetDate - 4 * 60 * 60 * 1000).getTime();
 const nowTime = new Date().getTime();
 
@@ -734,7 +752,7 @@ if (targetDate > nowTime && beforeFourHours < nowTime) {
 }
 
 const dateParam = getQueryParam('date');
-const date = '2024-08-17';
+const date = '2024-08-18';
 
 const dateDisplay = document.getElementById('date-display');
 dateDisplay.textContent = date;
