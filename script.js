@@ -779,7 +779,7 @@ function startCountdown(targetDate) {
     const interval = setInterval(updateCountdown, 1000);
 }
 
-const targetDate = new Date('Sun Aug 19 2024 20:30:00 GMT+0000').getTime();
+const targetDate = new Date('Sun Aug 20 2024 20:30:00 GMT+0000').getTime();
 const beforeFourHours = new Date(targetDate - 4 * 60 * 60 * 1000).getTime();
 const nowTime = new Date().getTime();
 
@@ -788,7 +788,7 @@ if (targetDate > nowTime && beforeFourHours < nowTime) {
 }
 
 const dateParam = getQueryParam('date');
-const date = '2024-08-19';
+const date = '2024-08-20';
 
 const dateDisplay = document.getElementById('date-display');
 dateDisplay.textContent = date;
