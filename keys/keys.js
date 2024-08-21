@@ -34,19 +34,21 @@ const games = {
         appToken: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
         promoId: '2aaf5aee-2cbc-47ec-8a3f-0962cc14bc71',
         interval: 20,
-        eventCount: 10,
+        eventCount: 16,
     }
 };
 
 function generateClientId() {
-    const timestamp = Date.now();
-    const randomNumbers = [];
-
-    for (let i = 0; i < 19; i++) {
-        randomNumbers.push(Math.floor(Math.random() * 10));
-    }
-
-    return `${timestamp}-${randomNumbers.join('')}`;
+    return crypto.randomUUID();
+    //
+    // const timestamp = Date.now();
+    // const randomNumbers = [];
+    //
+    // for (let i = 0; i < 19; i++) {
+    //     randomNumbers.push(Math.floor(Math.random() * 10));
+    // }
+    //
+    // return `${timestamp}-${randomNumbers.join('')}`;
 }
 
 
