@@ -231,7 +231,7 @@ async function generate() {
                 let registerToken = await registerEvent(token, selectedGame);
                 codes[index] = await createCode(registerToken, selectedGame);
             } catch (error) {
-                codes[index] = `Error: ${error.message}`;
+                codes[index] = `Ошибка: ${error.message}`;
             }
         })(i));
     }
