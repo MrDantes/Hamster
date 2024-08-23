@@ -54,7 +54,7 @@ function Copy(containerid) {
 
         <div style="display: flex">
             <label for="game-names-select" class="game-names-label">Игра:</label>
-            <select id="game-names-select">
+            <select id="game-names-select" onchange="updateGenerateTime(this)">
                 <option value="1">Riding Extreme 3D</option>
                 <option value="2">Chain Cube 2048</option>
                 <option value="3">My Clone Army</option>
@@ -69,8 +69,16 @@ function Copy(containerid) {
 
         <div id="process-generate-block" style="width: 100%; flex-direction: column;">
             <div class="generate-time-block">
-                <div id="generate-time-label">Времени осталось:</div>
-                <div id="generate-time-value"></div>
+                <div id="generate-time-label" translate="no">Нужно время:</div>
+                <div id="generate-time-value" translate="no"></div>
+                <div class="tooltip" tabindex="0">
+                    <div class="tooltip-symbol" translate="no">?</div>
+                    <div class="tooltiptext" style="margin-right: 120px; top: unset; bottom: 125%">
+                        <p>1. Рассчитывается указанное время:</p>
+                        <p><span class="important">Количество событий</span> * <span class="important">интервал между событиями</span></p>
+                        <p>2. Это приблизительное время, так как во время генерации могут возникнуть ошибки. Если таймер истечет, просто подождите еще немного.</p>
+                    </div>
+                </div>
             </div>
             <progress id="process-generate" value="0" max="100">0</progress>
         </div>
