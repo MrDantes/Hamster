@@ -61,6 +61,13 @@ const games = {
         promoId: '8814a785-97fb-4177-9193-ca4180ff9da8',
         interval: 20,
         eventCount: 10,
+    },
+    10 : {
+        name: 'Cafe Dash',
+        appToken: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+        promoId: 'bc0971b8-04df-4e72-8a3e-ec4dc663cd11',
+        interval: 20,
+        eventCount: 16,
     }
 };
 
