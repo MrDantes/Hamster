@@ -82,6 +82,20 @@ const games = {
         promoId: 'b2436c89-e0aa-4aed-8046-9b0515e1c46b',
         interval: 20,
         eventCount: 7,
+    },
+    13 : {
+        name: 'Tile Trio',
+        appToken: 'e68b39d2-4880-4a31-b3aa-0393e7df10c7',
+        promoId: 'e68b39d2-4880-4a31-b3aa-0393e7df10c7',
+        interval: 20,
+        eventCount: 5,
+    },
+    14 : {
+        name: 'Fluff Crusade',
+        appToken: '112887b0-a8af-4eb2-ac63-d82df78283d9',
+        promoId: '112887b0-a8af-4eb2-ac63-d82df78283d9',
+        interval: 120,
+        eventCount: 1,
     }
 };
 
