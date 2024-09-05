@@ -96,6 +96,13 @@ const games = {
         promoId: '112887b0-a8af-4eb2-ac63-d82df78283d9',
         interval: 120,
         eventCount: 1,
+    },
+    15 : {
+        name: 'Stone Age',
+        appToken: '04ebd6de-69b7-43d1-9c4b-04a6ca3305af',
+        promoId: '04ebd6de-69b7-43d1-9c4b-04a6ca3305af',
+        interval: 31,
+        eventCount: 5,
     }
 };
 
