@@ -892,7 +892,7 @@ const maps = {
             {id: 11, x: 1, y: 2, width: 2, height: 1, direction: 'horizontal', color: 'blue'},
         ],
         key: {id: 11, x: 1, y: 2, width: 2, height: 1, direction: 'horizontal'},
-        exitPosition: {x: 6, y: 2
+        exitPosition: {x: 6, y: 2}
     }
 };
 
