@@ -110,6 +110,13 @@ const games = {
         promoId: 'bc72d3b9-8e91-4884-9c33-f72482f0db37',
         interval: 61,
         eventCount: 1,
+    },
+    17 : {
+        name: 'Hide Ball',
+        appToken: '4bf4966c-4d22-439b-8ff2-dc5ebca1a600',
+        promoId: '4bf4966c-4d22-439b-8ff2-dc5ebca1a600',
+        interval: 10,
+        eventCount: 17,
     }
 };
 
