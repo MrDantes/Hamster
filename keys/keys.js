@@ -137,14 +137,21 @@ const games = {
         appToken: 'eb518c4b-e448-4065-9d33-06f3039f0fcb',
         promoId: 'eb518c4b-e448-4065-9d33-06f3039f0fcb',
         interval: 20,
-        eventCount: 13,
+        eventCount: 5,
     },
     21 : {
-        name: 'Count Masters',
+        name: 'Among water',
         appToken: 'daab8f83-8ea2-4ad0-8dd5-d33363129640',
         promoId: 'daab8f83-8ea2-4ad0-8dd5-d33363129640',
         interval: 20,
-        eventCount: 13,
+        eventCount: 5,
+    },
+    22 : {
+        name: 'Factory World',
+        appToken: 'd02fc404-8985-4305-87d8-32bd4e66bb16',
+        promoId: 'd02fc404-8985-4305-87d8-32bd4e66bb16',
+        interval: 20,
+        eventCount: 5,
     }
 };
 
