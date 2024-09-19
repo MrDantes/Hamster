@@ -131,6 +131,20 @@ const games = {
         promoId: '4bdc17da-2601-449b-948e-f8c7bd376553',
         interval: 20,
         eventCount: 13,
+    },
+    20 : {
+        name: 'Infected Frontier',
+        appToken: 'eb518c4b-e448-4065-9d33-06f3039f0fcb',
+        promoId: 'eb518c4b-e448-4065-9d33-06f3039f0fcb',
+        interval: 20,
+        eventCount: 13,
+    },
+    21 : {
+        name: 'Count Masters',
+        appToken: 'daab8f83-8ea2-4ad0-8dd5-d33363129640',
+        promoId: 'daab8f83-8ea2-4ad0-8dd5-d33363129640',
+        interval: 20,
+        eventCount: 13,
     }
 };
 
