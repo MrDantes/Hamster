@@ -193,6 +193,20 @@ a:active {
     color: #D93334;
 }
 
+.end {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+#end-hamster {
+    color: #D93334;
+    font-weight: bold;
+}
+#end-puzzle {
+    color: #f1c40f;
+}
+
 .footer {
     display: flex;
     width: 100%;
